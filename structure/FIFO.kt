@@ -1,4 +1,4 @@
-package com.example.libs.structure
+package libs.structure
 
 import kotlinx.coroutines.flow.MutableStateFlow
 
