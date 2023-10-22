@@ -1,4 +1,4 @@
-package com.example.libs
+package lan
 
 import android.content.Context
 import android.net.wifi.WifiManager
@@ -8,7 +8,7 @@ import timber.log.Timber
 import java.io.IOException
 
 /**
- * Получить IP адрес Wifi подключения
+ * Получить локальный IP адрес Wifi подключения
  *
  * @param context
  *

@@ -78,8 +78,7 @@ fun Modifier.scrollbar(
     hiddenAlpha: Float = 0f,
     fadeInAnimationDurationMs: Int = 150,
     fadeOutAnimationDurationMs: Int = 500,
-    fadeOutAnimationDelayMs: Int = 1000,
-    countCorrection: Int = 0
+    fadeOutAnimationDelayMs: Int = 1000
 ): Modifier = composed {
     check(thickness > 0.dp) { "Thickness must be a positive integer." }
     check(fixedKnobRatio == null || fixedKnobRatio < 1f) {

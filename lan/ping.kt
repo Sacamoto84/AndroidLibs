@@ -1,4 +1,4 @@
-package com.example.libs
+package lan
 
 import timber.log.Timber
 import java.io.IOException
