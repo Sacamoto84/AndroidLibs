@@ -1,5 +1,0 @@
-D:\Dropbox\Actual\TerminalM3\moduleBluetooth\src\main\java\module\bluetooth\bt.kt
-D:\Dropbox\Actual\TerminalM3\moduleBluetooth\src\main\java\module\bluetooth\ButtonBluetooth.kt
-D:\Dropbox\Actual\TerminalM3\moduleBluetooth\src\main\java\module\bluetooth\decoder.kt
-D:\Dropbox\Actual\TerminalM3\moduleBluetooth\src\main\java\module\bluetooth\initialisation.kt
-D:\Dropbox\Actual\TerminalM3\moduleBluetooth\src\main\java\module\bluetooth\obj.kt

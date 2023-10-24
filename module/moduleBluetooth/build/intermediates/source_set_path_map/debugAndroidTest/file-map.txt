@@ -1,9 +1,0 @@
-com.example.modulebluetooth.test.moduleBluetooth-core-ktx-1.12.0-0 C:\Users\user\.gradle\caches\transforms-3\329af2a7e37b36cc7523c3e941e39734\transformed\core-ktx-1.12.0\res
-com.example.modulebluetooth.test.moduleBluetooth-lifecycle-runtime-2.3.1-1 C:\Users\user\.gradle\caches\transforms-3\55c24df81c31fd6de5258dd918c9d8a7\transformed\lifecycle-runtime-2.3.1\res
-com.example.modulebluetooth.test.moduleBluetooth-annotation-experimental-1.3.0-2 C:\Users\user\.gradle\caches\transforms-3\5c46f7742a64aea21d11cd2366884798\transformed\annotation-experimental-1.3.0\res
-com.example.modulebluetooth.test.moduleBluetooth-core-1.12.0-3 C:\Users\user\.gradle\caches\transforms-3\93fc671ac7b7f3daf8daaf48c3ae0d28\transformed\core-1.12.0\res
-com.example.modulebluetooth.test.moduleBluetooth-androidTest-4 D:\Dropbox\Actual\TerminalM3\moduleBluetooth\build\generated\res\resValues\androidTest\debug
-com.example.modulebluetooth.test.moduleBluetooth-mergeDebugAndroidTestResources-5 D:\Dropbox\Actual\TerminalM3\moduleBluetooth\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.modulebluetooth.test.moduleBluetooth-mergeDebugAndroidTestResources-6 D:\Dropbox\Actual\TerminalM3\moduleBluetooth\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.modulebluetooth.test.moduleBluetooth-merged_res-7 D:\Dropbox\Actual\TerminalM3\moduleBluetooth\build\intermediates\merged_res\debugAndroidTest
-com.example.modulebluetooth.test.moduleBluetooth-packaged_res-8 D:\Dropbox\Actual\TerminalM3\moduleBluetooth\build\intermediates\packaged_res\debug
