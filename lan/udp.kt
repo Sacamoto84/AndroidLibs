@@ -1,9 +1,11 @@
 package lan
 
 import android.os.StrictMode
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.io.IOException
 import java.net.DatagramPacket
@@ -14,19 +16,23 @@ class UDP{
     /**
      * Прием строк из UDP порта и помещение в канал
      */
-    suspend fun receiveScope( port: Int = 8888, channel: Channel<String>) = withContext(Dispatchers.IO) {
-        println("Запуск UDP receiveScope")
-        val buffer = ByteArray(1024 * 1024)
-        val socket = DatagramSocket(port)
-        socket.broadcast = true
-        val packet = DatagramPacket(buffer, buffer.size)
-        socket.receiveBufferSize = 1024 * 1024
-        while (true) {
-            socket.receive(packet)
-            val string = String(packet.data.copyOfRange(0, packet.length))
-            //println("!UDPRoutine! packet RAW=[$string")
-            channel.send(string)
+    @OptIn(DelicateCoroutinesApi::class)
+    suspend fun receiveScope(port: Int = 8888, channel: Channel<String>) {
+
+        GlobalScope.launch(Dispatchers.IO){
+            println("Запуск UDP receiveScope")
+            val buffer = ByteArray(1024 * 1024)
+            val socket = DatagramSocket(port)
+            socket.broadcast = true
+            val packet = DatagramPacket(buffer, buffer.size)
+            socket.receiveBufferSize = 1024 * 1024
+            while (true) {
+                socket.receive(packet)
+                val string = String( packet.data.copyOfRange( 0, packet.length )) //println("!UDPRoutine! packet RAW=[$string")
+                channel.send(string)
+            }
         }
+
     }
 
 
