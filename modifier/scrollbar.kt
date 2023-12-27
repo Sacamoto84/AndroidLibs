@@ -62,7 +62,7 @@ fun Modifier.scrollbar(
 
     // Используем это, чтобы оценить, сколько элементов может вместиться в окно просмотра.
     //val count = console.messages.count { it.pairList.isNotEmpty() },
-    count : Int,
+    count: Int,
 
     state: LazyListState,
     horizontal: Boolean,
@@ -102,7 +102,11 @@ fun Modifier.scrollbar(
     } else {
         hiddenAlpha
     }
-    val animationDurationMs = if (state.isScrollInProgress) { fadeInAnimationDurationMs } else { fadeOutAnimationDurationMs }
+    val animationDurationMs = if (state.isScrollInProgress) {
+        fadeInAnimationDurationMs
+    } else {
+        fadeOutAnimationDurationMs
+    }
 
     val animationDelayMs = if (state.isScrollInProgress) {
         0

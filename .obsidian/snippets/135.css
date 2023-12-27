@@ -1,0 +1,10 @@
+.gray-text {
+  color: gray;
+}
+
+
+
+:contains('obs') {
+  color: red;
+}
+

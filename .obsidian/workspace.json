@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "19625c6a0a3f2ba2",
+    "type": "split",
+    "children": [
+      {
+        "id": "14e74dfcaec2db11",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ccc5889364dfc06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "books/Корутина книга/147.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "497ce61e17a1bef3",
+    "type": "split",
+    "children": [
+      {
+        "id": "02d3f70d1c6c3680",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3df86079bcada674",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7efcf29998572ac0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#q1obs",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1699505a6d059cf3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "263911c02bc4e9ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "e82d4c78d56cbf82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14c04c4d76f7bafc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "books/Корутина книга/147.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "217fd79c10380b11",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "books/Корутина книга/147.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ad0273d94efd15da",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "76d744b37aedf39d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "books/Корутина книга/147.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "5ccc5889364dfc06",
+  "lastOpenFiles": [
+    "Pasted image 20231227182138.png",
+    "books/Корутина книга/147.md",
+    "books/Корутина книга/135.md",
+    "books/Без названия.md",
+    "books/Корутина книга/q.js",
+    "books/Корутина книга/Text Document.txt",
+    "books/properties.md",
+    "image/README.md",
+    "books/Hilt.md",
+    "books/Корутина книга/135.css",
+    "books/Корутина книга/Без 135.md",
+    "Без названия.md",
+    "the.jpg.md",
+    "book/README.md",
+    "books/README.md",
+    "books/Корутина книга",
+    "Pasted image 20231211214546.png",
+    "Pasted image 20231211214525.png",
+    "Pasted image 20231211205504.png",
+    "Pasted image 20231211205447.png",
+    "books/flow.md",
+    "books/animation.md",
+    "Pasted image 20231211205342.png"
+  ]
+}

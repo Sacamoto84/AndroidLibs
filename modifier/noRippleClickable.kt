@@ -7,13 +7,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 
 fun Modifier.noRippleClickable(
-        enabled: Boolean = true,
-        onClick: () -> Unit = {}
-    ): Modifier = composed {
-        clickable(
-            enabled = enabled,
-            indication = null,
-            interactionSource = remember { MutableInteractionSource() },
-            onClick = onClick
-        )
-    }
+    enabled: Boolean = true,
+    onClick: () -> Unit = {}
+): Modifier = composed {
+    clickable(
+        enabled = enabled,
+        indication = null,
+        interactionSource = remember { MutableInteractionSource() },
+        onClick = onClick
+    )
+}

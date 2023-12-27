@@ -18,7 +18,8 @@ fun readLocalIP(context: Context): String {
     val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
     StrictMode.setThreadPolicy(policy)
     try {
-        val wifiManager = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+        val wifiManager =
+            context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
         val ipAddress: String = Formatter.formatIpAddress(wifiManager.connectionInfo.ipAddress)
         Timber.i("IP: $ipAddress")
         return ipAddress

@@ -34,6 +34,7 @@ fun ping(ip: String = "http://192.168.0.200"): Boolean {
                 e.printStackTrace()
                 "loadLink: Security Exception. Needs permission? ${e.message}"
             }
+
             else -> "Unknown error: ${e.message}"
         }
         Timber.e(s)

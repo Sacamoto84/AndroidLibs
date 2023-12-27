@@ -35,7 +35,7 @@ fun ping2(ip: String = "192.168.0.200"): Boolean {
     return address.isReachable(1000)
 }
 
-fun runSystemCommand(command: String?):Boolean {
+fun runSystemCommand(command: String?): Boolean {
     try {
         val p = Runtime.getRuntime().exec(command)
         val exitValue: Int = p.waitFor()

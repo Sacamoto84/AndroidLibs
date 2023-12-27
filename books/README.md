@@ -1,8 +1,10 @@
-# books
+# 
 
+
+
+books
 
 ==Highlighted text==
-
 
 <https://skillbox.ru/media/code/>
 
@@ -10,14 +12,11 @@
 
 ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 
-
-
 ```mermaid 
 sequenceDiagram Alice->>+John: Hello John, how are you? 
 Alice->>+John: John, can you hear me? 
 John-->>-Alice: Hi Alice, I can hear you! John-->>-Alice: I feel great! 
 ```
-
 
 ```mermaid
 graph TD;
@@ -27,3 +26,21 @@ graph TD;
     C-->D;
 ```
 
+
+
+
+
+```kotlin
+suspend fun main() {
+	val time = measureTimeMillis {
+		coroutineScope {
+			repeat(50) {
+				launch(Dispatchers.IO) {
+					Thread.sleep(1000)
+				}
+			}
+		}
+	}
+	println(time) // ~1000
+}
+```

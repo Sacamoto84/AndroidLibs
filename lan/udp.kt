@@ -12,14 +12,14 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-class UDP{
+class UDP {
     /**
      * Прием строк из UDP порта и помещение в канал
      */
     @OptIn(DelicateCoroutinesApi::class)
     suspend fun receiveScope(port: Int = 8888, channel: Channel<String>) {
 
-        GlobalScope.launch(Dispatchers.IO){
+        GlobalScope.launch(Dispatchers.IO) {
             println("Запуск UDP receiveScope")
             val buffer = ByteArray(1024 * 1024)
             val socket = DatagramSocket(port)
@@ -28,7 +28,12 @@ class UDP{
             socket.receiveBufferSize = 1024 * 1024
             while (true) {
                 socket.receive(packet)
-                val string = String( packet.data.copyOfRange( 0, packet.length )) //println("!UDPRoutine! packet RAW=[$string")
+                val string = String(
+                    packet.data.copyOfRange(
+                        0,
+                        packet.length
+                    )
+                ) //println("!UDPRoutine! packet RAW=[$string")
                 channel.send(string)
             }
         }
@@ -49,7 +54,7 @@ class UDP{
             socket.broadcast = true
             val sendData = messageStr.toByteArray()
             val sendPacket =
-                    DatagramPacket(sendData, sendData.size, InetAddress.getByName(ip), port)
+                DatagramPacket(sendData, sendData.size, InetAddress.getByName(ip), port)
             socket.send(sendPacket)
             println("sendUDP: $ip:$port")
         } catch (e: IOException) {
