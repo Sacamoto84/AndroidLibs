@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/Корутина книга/265.md",
+                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 336.5
   },
   "right": {
     "id": "263911c02bc4e9ae",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/Корутина книга/265.md",
+                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/Корутина книга/265.md",
+                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "books/Корутина книга/265.md"
+                "file": "books/Корутина книга/301 Flow lifecycle functions.md"
               }
             }
           }
@@ -148,22 +148,35 @@
   },
   "active": "6e270d7eee5cea35",
   "lastOpenFiles": [
-    "image/README.md",
-    "Pasted image 20231211205342.png",
-    "Pasted image 20231227182138.png",
-    "the.jpg.md",
-    "books/Корутина книга/265.md",
-    "books/Корутина книга/img/q1.png",
-    "books/Hilt.md",
-    "books/flow.md",
-    "books/Корутина книга/img",
-    "books/Корутина книга/Pasted image 20231211205342.png",
-    "books/Корутина книга/257-264.md",
+    "books/Корутина книга/img/322.png",
+    "books/Корутина книга/img/321.png",
+    "books/Корутина книга/img/319.png",
+    "books/Корутина книга/img/316_2.png",
+    "books/Корутина книга/img/316.png",
+    "books/Корутина книга/img/315.png",
+    "books/Корутина книга/img/313.png",
+    "books/Корутина книга/img/312.png",
+    "books/Корутина книга/img/kotlin_korutiny_48.png",
+    "books/Корутина книга/img/kotlin_korutiny_47.png",
+    "books/Корутина книга/img/kotlin_korutiny_46.png",
+    "books/Корутина книга/289 Flow building.md",
+    "books/Корутина книга/301 Flow lifecycle functions.md",
+    "books/Корутина книга/277 Understanding Flow.md",
+    "books/Корутина книга/265 Flow introduction.md",
+    "books/Корутина книга/kotlin_korutiny.pdf",
     "books/Корутина книга/251-256.md",
     "books/Корутина книга/240-250.md",
     "books/Корутина книга/228 - 239 Part 3 Channel and Flow.md",
     "books/Корутина книга/147.md",
+    "books/Корутина книга/8 Part1. Why Kotlin Coroutines.md",
     "books/Корутина книга/135.md",
+    "books/Корутина книга/Вставка картинки.md",
+    "image/README.md",
+    "the.jpg.md",
+    "books/Hilt.md",
+    "books/flow.md",
+    "books/Корутина книга/img",
+    "books/Корутина книга/257-264.md",
     "books/Без названия.md",
     "251.md",
     "Без названия 1.md",
@@ -177,11 +190,6 @@
     "books/Корутина книга/Без 135.md",
     "Без названия.md",
     "book/README.md",
-    "books/Корутина книга",
-    "Pasted image 20231211214546.png",
-    "Pasted image 20231211214525.png",
-    "Pasted image 20231211205504.png",
-    "Pasted image 20231211205447.png",
-    "books/animation.md"
+    "books/Корутина книга"
   ]
 }
