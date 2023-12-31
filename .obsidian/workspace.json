@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
+                "file": "books/Корутина книга/339 SharedFlow and StateFlow.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 291.5
   },
   "right": {
     "id": "263911c02bc4e9ae",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
+                "file": "books/Корутина книга/339 SharedFlow and StateFlow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "books/Корутина книга/301 Flow lifecycle functions.md",
+                "file": "books/Корутина книга/339 SharedFlow and StateFlow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "books/Корутина книга/301 Flow lifecycle functions.md"
+                "file": "books/Корутина книга/339 SharedFlow and StateFlow.md"
               }
             }
           }
@@ -148,19 +148,22 @@
   },
   "active": "6e270d7eee5cea35",
   "lastOpenFiles": [
-    "books/Корутина книга/img/322.png",
-    "books/Корутина книга/img/321.png",
-    "books/Корутина книга/img/319.png",
-    "books/Корутина книга/img/316_2.png",
-    "books/Корутина книга/img/316.png",
-    "books/Корутина книга/img/315.png",
-    "books/Корутина книга/img/313.png",
-    "books/Корутина книга/img/312.png",
-    "books/Корутина книга/img/kotlin_korutiny_48.png",
-    "books/Корутина книга/img/kotlin_korutiny_47.png",
-    "books/Корутина книга/img/kotlin_korutiny_46.png",
-    "books/Корутина книга/289 Flow building.md",
+    "books/Корутина книга/312 Flow processing.md",
+    "books/Корутина книга/339 SharedFlow and StateFlow.md",
+    "books/Корутина книга/img/333.png",
+    "books/Корутина книга/img/332.png",
+    "books/Корутина книга/img/330.png",
+    "books/Корутина книга/img/329.png",
+    "books/Корутина книга/img/326.png",
+    "books/Корутина книга/img/325.png",
+    "books/Корутина книга/img/324.png",
+    "books/Корутина книга/img/kotlin_korutiny_57.png",
+    "books/Корутина книга/img/kotlin_korutiny_56.png",
+    "books/Корутина книга/img/kotlin_korutiny_55.png",
+    "img/321png.md",
+    "img",
     "books/Корутина книга/301 Flow lifecycle functions.md",
+    "books/Корутина книга/289 Flow building.md",
     "books/Корутина книга/277 Understanding Flow.md",
     "books/Корутина книга/265 Flow introduction.md",
     "books/Корутина книга/kotlin_korutiny.pdf",
@@ -188,8 +191,6 @@
     "books/Корутина книга/Text Document.txt",
     "books/Корутина книга/135.css",
     "books/Корутина книга/Без 135.md",
-    "Без названия.md",
-    "book/README.md",
     "books/Корутина книга"
   ]
 }

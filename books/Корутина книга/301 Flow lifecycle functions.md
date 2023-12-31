@@ -220,4 +220,115 @@ suspend fun main(): Unit {
 // Caught
 ```
 
-307
+Обратите внимание, что использование `catch` не защищает нас от исключения в терминальной операции (потому что catch нельзя разместить после последней операции). Таким образом, если происходит исключение в методе `collect`, его не удастся перехватить, и будет сгенерирована ошибка.
+
+```kotlin
+val flow = flow {
+	emit("Message1")
+	emit("Message2")
+}
+suspend fun main(): Unit {
+	flow.onStart { println("Before") }
+		.catch { println("Caught $it") }
+		.collect { throw MyError() }
+}
+// Before
+// Exception in thread "..." MyError: My error
+```
+
+## flowOn
+
+Лямбда-выражения, используемые в качестве аргументов для операций в потоках (например, `onEach`, `onStart`, `onCompletion` и т. д.) и их конструкторы (например, `flow` или `channelFlow`), все они обладают природой приостановки выполнения. Приостановленные функции должны иметь контекст и должны быть в отношении к своему родительскому контексту (для структурированной конкурентности). Возможно, вы задаетесь вопросом, откуда берут свой контекст эти функции. Ответ: они берут его из контекста, в котором вызывается метод `collect`.
+
+```kotlin
+fun usersFlow(): Flow<String> = flow {
+	repeat(2) {
+		val ctx = currentCoroutineContext()
+		val name = ctx[CoroutineName]?.name
+		emit("User$it in $name")
+	}
+}
+suspend fun main() {
+	val users = usersFlow()
+	withContext(CoroutineName("Name1")) {
+		users.collect { println(it) }
+	}
+	withContext(CoroutineName("Name2")) {
+		users.collect { println(it) }
+	}
+}
+// User0 in Name1
+// User1 in Name1
+// User0 in Name2
+// User1 in Name2
+
+```
+
+Как работает этот код? Вызов терминальной операции запрашивает элементы из источника, тем самым распространяя контекст корутины. Однако его также можно изменить с помощью функции `flowOn`.
+
+```kotlin
+suspend fun present(place: String, message: String) {
+	val ctx = coroutineContext
+	val name = ctx[CoroutineName]?.name
+	println("[$name] $message on $place")
+}
+
+fun messagesFlow(): Flow<String> = flow {
+	present("flow builder", "Message")
+	emit("Message")
+}
+
+suspend fun main() {
+	val users = messagesFlow()
+	withContext(CoroutineName("Name1")) {
+		users
+			.flowOn(CoroutineName("Name3"))
+			.onEach { present("onEach", it) }
+			.flowOn(CoroutineName("Name2"))
+			.collect { present("collect", it) }
+	}
+}
+// [Name3] Message on flow builder
+// [Name2] Message on onEach
+// [Name1] Message on collect
+```
+
+Помни, что `flowOn` работает только для функций, которые находятся в источнике данных (в начале) потока.
+
+![[./img/310.png]]
+
+## launchIn
+
+`collect` - это операция приостановки, которая приостанавливает корутину до завершения потока. Часто её оборачивают в конструкцию `launch`, чтобы обработка потока могла начаться в другой корутине. Для удобства в таких случаях есть функция `launchIn`, которая запускает `collect` в новой корутине в рамках объекта `scope`, переданного единственным аргументом.
+
+```kotlin
+fun <T> Flow<T>.launchIn(scope: CoroutineScope): Job =
+	scope.launch { collect() }
+```
+
+`launchIn` часто используется для запуска обработки потока в отдельной корутине.
+
+```kotlin
+suspend fun main(): Unit = coroutineScope {
+	flowOf("User1", "User2")
+		.onStart { println("Users:") }
+		.onEach { println(it) }
+		.launchIn(this)
+}
+// Users:
+// User1
+// User2
+```
+
+В этой главе мы изучили различные функциональности Flow. Теперь мы знаем, как выполнять действия при старте нашего потока, при его завершении или для каждого элемента; также мы умеем обрабатывать исключения и запускать поток в новой корутине. Это типичные инструменты, которые широко используются, особенно в разработке под Android. Например, вот как поток может использоваться на Android:
+
+```kotlin
+fun updateNews() {
+	newsFlow()
+		.onStart { showProgressBar() }
+		.onCompletion { hideProgressBar() }
+		.onEach { view.showNews(it) }
+		.catch { view.handleError(it) }
+		.launchIn(viewModelScope)
+}
+```
